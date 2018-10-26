@@ -143,13 +143,12 @@ public final class QueryUtils {
             for (int i = 0; i < jsonArrayResults.length(); i++){
 
                 JSONObject currentArticle = jsonArrayResults.getJSONObject(i);
-                JSONObject jsonObjectFields = currentArticle.getJSONObject( "fields" );
 
                 webSectionName = currentArticle.optString( "sectionName" );
                 webPublicationDate = currentArticle.optString( "webPublicationDate" );
-                webTitle = jsonObjectFields.getString( "headline" );
-                webUrl = jsonObjectFields.getString( "shortUrl" );
-                byLine = jsonObjectFields.optString( "byline" );
+                webTitle = currentArticle.getString( "webTitle" );
+                webUrl = currentArticle.getString( "webUrl" );
+                byLine = currentArticle.optString( "byline" );
 
                 newsArticles.add( new News(
                         webSectionName,

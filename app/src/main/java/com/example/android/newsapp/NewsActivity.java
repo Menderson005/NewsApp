@@ -24,7 +24,7 @@ public class NewsActivity extends AppCompatActivity
 
     /** URL for Guardian API */
     private static final String Guardian_URL =
-            "https://content.guardianapis.com/search?ENTER API KEY;
+            "https://content.guardianapis.com/search?api-key=";
 
      /** Constant value for loader ID */
      private static final int NEWS_LOADER_ID = 1;
